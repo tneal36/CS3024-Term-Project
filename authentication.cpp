@@ -21,15 +21,17 @@ int main() {
     cout << "Please enter your password: ";
     scanf("%s", inputPassword); //Vulnerability: Buffer Overflow
 
-    if (inputUsername == username && inputPassword == password) {
+    if (strcmp(inputUsername, username) == 0 && strcmp(inputPassword, password) == 0) {
         cout << "Authentication successful! Welcome, " << username << "!" << endl;
-    } else {
-        cout << "Authentication failed! Please try again." << endl;
+    } 
+    else {
+        if (strcmp(inputUsername, username) != 0) {
+            cout << "Error: Username does not exist." << endl; //Vulnerability: Information Disclosure
+        } 
+        else {
+            cout << "Error: Incorrect password." << endl; //Vulnerability: Information Disclosure
+        }
     }
-
-
-    
-
-
+ 
     return 0;
 }
