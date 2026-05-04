@@ -1,3 +1,10 @@
+/*
+Title: Extremely Secure Authentication System
+Description: This code is a simple authentication system that prompts the user for a username and password. It checks the input against hardcoded credentials and provides feedback on whether the authentication was successful or not. However, it contains several vulnerabilities, including hardcoded credentials, buffer overflow risks, information disclosure, and dead code.
+Name: Taylor Neal
+*/
+
+
 #include <iostream>
 #include <cstring>
 #include <cstdio>
