@@ -14,7 +14,7 @@ int main() {
     char inputUsername[10];
     char inputPassword[10];
 
-    cout << "Welcome to your extremely secure authentication system!" << endl;
+    cout << "Welcome to your extremely secure authentication system! Wow! So Secure!" << endl;
     
     cout << "Please enter your username: ";
     scanf("%s", inputUsername); //Vulnerability: Buffer Overflow
